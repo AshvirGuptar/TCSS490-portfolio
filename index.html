@@ -1,460 +1,332 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TCSS 490 - Blue Two Portfolio</title>
-  
-  <!-- Tailwind CSS CDN -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TCSS 490 Portfolio | Team Blue Two</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Font Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Tailwind Configuration -->
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['Fira Code', 'monospace'],
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            }
           }
         }
       }
     }
   </script>
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .font-mono {
-      font-family: 'Fira Code', monospace;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-200 antialiased font-sans flex flex-col justify-between">
 
-<body class="min-h-screen transition-colors duration-300 bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-
-  <!-- Top Navigation Header -->
-  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 transition-colors">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 gap-2">
-        
-        <!-- Course Title & Team Branding -->
-        <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-md shadow-sky-500/20 shrink-0">
-            <i class="fa-solid fa-code"></i>
-          </div>
-          <div class="overflow-hidden">
-            <span class="font-bold text-xs sm:text-sm md:text-base tracking-tight block truncate">
-              TCSS 490: Special Topics In Computing And Software Systems
-            </span>
-            <div class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 font-mono -mt-0.5">
-              <i class="fa-solid fa-users text-sky-500"></i>
-              <span class="font-semibold text-sky-600 dark:text-sky-400">BLUE TWO</span>
-            </div>
-          </div>
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-lg flex items-center justify-center w-10 h-10 shadow-md shadow-blue-500/20">
+          <i class="fa-solid fa-code"></i>
         </div>
-
-        <!-- Header Actions -->
-        <div class="flex items-center space-x-2 shrink-0">
-          <!-- Dark Mode Toggle -->
-          <button
-            id="theme-toggle"
-            onclick="toggleTheme()"
-            class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all focus:outline-none"
-            aria-label="Toggle theme"
-          >
-            <i id="theme-icon" class="fa-solid fa-sun text-amber-400"></i>
-          </button>
-
-          <!-- Log Modal Trigger -->
-          <button
-            onclick="openLogModal()"
-            class="bg-sky-600 hover:bg-sky-500 text-white text-xs sm:text-sm font-semibold px-3.5 py-2 rounded-xl transition-all shadow-sm hover:shadow-sky-500/20 flex items-center gap-2"
-          >
-            <i class="fa-solid fa-terminal"></i>
-            <span class="hidden sm:inline">View Prompt Log</span>
-            <span class="sm:hidden">LOG.md</span>
-          </button>
+        <div>
+          <h1 class="font-bold text-slate-900 dark:text-white leading-none">Course Portfolio</h1>
+          <p class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">TCSS 490</p>
         </div>
+      </div>
 
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950/80 dark:text-blue-300 border border-blue-200 dark:border-blue-800/60">
+          <i class="fa-solid fa-users text-blue-500"></i> BLUE TWO
+        </span>
+        <button id="themeToggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+          <i id="themeIcon" class="fa-solid fa-moon"></i>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Main Content Layout -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full">
     
-    <!-- Section Title -->
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
-      <div class="space-y-1">
-        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs font-mono font-semibold">
-          <i class="fa-solid fa-users"></i> GROUP: BLUE TWO
-        </div>
-        <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-          Group Project Cards
-        </h1>
-      </div>
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-mono font-medium text-slate-600 dark:text-slate-300 self-start sm:self-auto">
-        <span>Quarter Status:</span>
-        <span class="text-emerald-500 font-bold">1 / 5 Active</span>
-      </div>
-    </div>
-
-    <!-- 5 Artifact Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- ARTIFACT 1 CARD (Completed / Live) -->
-      <div class="group relative flex flex-col justify-between rounded-2xl p-6 bg-white dark:bg-slate-900 border-2 border-sky-500/80 dark:border-sky-500/60 shadow-lg shadow-sky-500/5 hover:-translate-y-1 transition-all duration-300">
-        <div class="space-y-4">
-          <!-- Status -->
-          <div class="flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
-              <i class="fa-solid fa-circle-check"></i> Live • Artifact 1
-            </span>
-            <span class="text-xs font-mono text-slate-400">Week 1</span>
+    <!-- Hero Section -->
+    <section class="mb-12">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+        <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+          <div class="space-y-3 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+              <i class="fa-solid fa-graduation-cap text-blue-500"></i>
+              <span>TCSS 490: Special Topics In Computing And Software Systems</span>
+            </div>
+            
+            <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+              Group Project Cards
+            </h2>
+            
+            <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold text-sm">
+              <i class="fa-solid fa-user-group"></i>
+              <span>BLUE TWO</span>
+            </div>
           </div>
 
-          <!-- Header -->
-          <div class="flex items-start gap-3">
-            <div class="p-2.5 rounded-xl bg-sky-500/10 text-sky-500 shrink-0">
-              <i class="fa-solid fa-laptop-code"></i>
-            </div>
+          <div class="flex flex-wrap gap-3">
+            <button id="openLogBtn" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 shadow-sm transition-all">
+              <i class="fa-solid fa-terminal text-xs"></i>
+              <span>View Prompt Log (LOG.md)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artifact Cards Grid -->
+    <section>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Artifact 1 (Real & Completed) -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border-2 border-blue-500/80 dark:border-blue-500/60 shadow-lg shadow-blue-500/5 flex flex-col overflow-hidden transition-all duration-200 hover:-translate-y-1">
+          <div class="bg-blue-500/10 px-6 py-3 border-b border-blue-100 dark:border-blue-900/40 flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Artifact 1</span>
+            <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800/50">
+              <i class="fa-solid fa-circle-check text-[10px]"></i> Active / Live
+            </span>
+          </div>
+
+          <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
             <div>
-              <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition-colors leading-snug">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
                 Artifact 1: Portfolio & Reflection Site
-              </h2>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono">
-                HTML5 / Tailwind / GitHub Pages
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                The initial single-page application built to house all course artifacts for TCSS 490. Designed using static HTML, CSS, and JavaScript with dark mode and interaction logging.
+              </p>
+              
+              <div class="bg-slate-50 dark:bg-slate-800/60 rounded-xl p-3 border border-slate-200/80 dark:border-slate-700/60 mb-4">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Reflection</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-300 italic">
+                  "Iterated with AI chat tools to structure a clean responsive site. Focused on lightweight front-end delivery and accessible dark mode toggling."
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 dark:border-slate-800">
+              <a href="https://github.com/AshvirGuptar/TCSS490-blue-two-portfolio" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm">
+                <i class="fa-brands fa-github"></i>
+                <span>View Artifact</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-80"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artifact 2 (Placeholder) -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col overflow-hidden transition-all duration-200 hover:-translate-y-1">
+          <div class="bg-slate-100 dark:bg-slate-800/50 px-6 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Artifact 2</span>
+            <span class="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">
+              Placeholder
+            </span>
+          </div>
+
+          <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                Artifact 2: Something We Will Use
+              </h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+                A shared study session scheduler or bus tracking bot tailored for group Blue Two members to coordinate assignment syncs.
               </p>
             </div>
-          </div>
 
-          <!-- Description -->
-          <div class="space-y-1">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Overview</h3>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              A responsive, static single-page web app configured for TCSS 490 to display all five quarter artifacts, reflections, and direct markdown prompt logs for team Blue Two.
-            </p>
-          </div>
-
-          <!-- Reflection -->
-          <div class="space-y-1">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Reflection & Notes</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Building on GitHub Pages with zero build step allows for instantaneous deployment and effortless update maintenance across our team.
-            </p>
+            <div class="pt-2 border-t border-slate-100 dark:border-slate-800">
+              <button disabled class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800/60 cursor-not-allowed">
+                <span>Coming Soon</span>
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- Footer Buttons -->
-        <div class="pt-4 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-3">
-          <button onclick="openLogModal()" class="text-xs font-medium text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
-            <i class="fa-regular fa-file-code"></i> Prompt Notes
-          </button>
-          <a href="#" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold transition-all shadow-sm">
-            <span>Repository</span>
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- ARTIFACT 2 CARD -->
-      <div class="group relative flex flex-col justify-between rounded-2xl p-6 bg-white/60 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:-translate-y-1 transition-all duration-300">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-semibold">
-              <i class="fa-solid fa-hourglass-half"></i> Idea • Artifact 2
+        <!-- Artifact 3 (Placeholder) -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col overflow-hidden transition-all duration-200 hover:-translate-y-1">
+          <div class="bg-slate-100 dark:bg-slate-800/50 px-6 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Artifact 3</span>
+            <span class="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">
+              Placeholder
             </span>
-            <span class="text-xs font-mono text-slate-400">Week 3</span>
           </div>
 
-          <div class="flex items-start gap-3">
-            <div class="p-2.5 rounded-xl bg-sky-500/10 text-sky-500 shrink-0">
-              <i class="fa-solid fa-wrench"></i>
-            </div>
+          <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
             <div>
-              <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition-colors leading-snug">
-                Artifact 2: Something We Will Use
-              </h2>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono">Node.js / Webhooks / API</p>
-            </div>
-          </div>
-
-          <div class="space-y-1">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Idea & Concept</h3>
-            <textarea class="w-full bg-slate-100/70 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 text-xs text-slate-600 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-sky-500 leading-relaxed resize-none italic" rows="3">A utility tool built specifically for our team or campus routine — such as an automated study group alert webhook or schedule coordinator.</textarea>
-          </div>
-
-          <div class="space-y-1">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Reflection & Notes</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Idea phase: Brainstorming practical daily tools that directly benefit our study workflow in Blue Two.
-            </p>
-          </div>
-        </div>
-
-        <div class="pt-4 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-3">
-          <span class="text-xs text-slate-400 italic">Placeholder Card</span>
-          <button disabled class="px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-400 text-xs font-semibold cursor-not-allowed">
-            Pending
-          </button>
-        </div>
-      </div>
-
-      <!-- ARTIFACT 3 CARD -->
-      <div class="group relative flex flex-col justify-between rounded-2xl p-6 bg-white/60 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:-translate-y-1 transition-all duration-300">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-semibold">
-              <i class="fa-solid fa-hourglass-half"></i> Idea • Artifact 3
-            </span>
-            <span class="text-xs font-mono text-slate-400">Week 5</span>
-          </div>
-
-          <div class="flex items-start gap-3">
-            <div class="p-2.5 rounded-xl bg-sky-500/10 text-sky-500 shrink-0">
-              <i class="fa-solid fa-robot"></i>
-            </div>
-            <div>
-              <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition-colors leading-snug">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
                 Artifact 3: AI Inside
-              </h2>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono">Python / LLM API / FastAPI</p>
+              </h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+                An interactive tool leveraging lightweight LLM API integrations or prompt engineering for quick code review assistance.
+              </p>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 dark:border-slate-800">
+              <button disabled class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800/60 cursor-not-allowed">
+                <span>Coming Soon</span>
+              </button>
             </div>
           </div>
-
-          <div class="space-y-1">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Idea & Concept</h3>
-            <textarea class="w-full bg-slate-100/70 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 text-xs text-slate-600 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-sky-500 leading-relaxed resize-none italic" rows="3">A project centered around generative AI capabilities — like an automated research document summarizer or intelligent prompt reviewer.</textarea>
-          </div>
-
-          <div class="space-y-1">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Reflection & Notes</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Idea phase: Exploring API key security, prompt pipelines, and clean summary parsing.
-            </p>
-          </div>
         </div>
 
-        <div class="pt-4 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-3">
-          <span class="text-xs text-slate-400 italic">Placeholder Card</span>
-          <button disabled class="px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-400 text-xs font-semibold cursor-not-allowed">
-            Pending
-          </button>
-        </div>
-      </div>
-
-      <!-- ARTIFACT 4 CARD -->
-      <div class="group relative flex flex-col justify-between rounded-2xl p-6 bg-white/60 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:-translate-y-1 transition-all duration-300">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-semibold">
-              <i class="fa-solid fa-hourglass-half"></i> Idea • Artifact 4
+        <!-- Artifact 4 (Placeholder) -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col overflow-hidden transition-all duration-200 hover:-translate-y-1">
+          <div class="bg-slate-100 dark:bg-slate-800/50 px-6 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Artifact 4</span>
+            <span class="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">
+              Placeholder
             </span>
-            <span class="text-xs font-mono text-slate-400">Week 7</span>
           </div>
 
-          <div class="flex items-start gap-3">
-            <div class="p-2.5 rounded-xl bg-sky-500/10 text-sky-500 shrink-0">
-              <i class="fa-solid fa-handshake font-bold"></i>
-            </div>
+          <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
             <div>
-              <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition-colors leading-snug">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
                 Artifact 4: For Someone Else
-              </h2>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono">JS / Web APIs / Client UI</p>
+              </h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+                A custom solution built specifically to help solve a real operational problem for a local business or community non-profit.
+              </p>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 dark:border-slate-800">
+              <button disabled class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800/60 cursor-not-allowed">
+                <span>Coming Soon</span>
+              </button>
             </div>
           </div>
-
-          <div class="space-y-1">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Idea & Concept</h3>
-            <textarea class="w-full bg-slate-100/70 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 text-xs text-slate-600 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-sky-500 leading-relaxed resize-none italic" rows="3">A targeted web app built for an external user group or community stakeholder, solving a real-world scheduling or communication gap.</textarea>
-          </div>
-
-          <div class="space-y-1">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Reflection & Notes</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Idea phase: Identifying external client requirements and focusing on clean usability.
-            </p>
-          </div>
         </div>
 
-        <div class="pt-4 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-3">
-          <span class="text-xs text-slate-400 italic">Placeholder Card</span>
-          <button disabled class="px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-400 text-xs font-semibold cursor-not-allowed">
-            Pending
-          </button>
-        </div>
-      </div>
-
-      <!-- ARTIFACT 5 CARD -->
-      <div class="group relative flex flex-col justify-between rounded-2xl p-6 bg-white/60 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:-translate-y-1 transition-all duration-300">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-semibold">
-              <i class="fa-solid fa-hourglass-half"></i> Idea • Artifact 5
+        <!-- Artifact 5 (Placeholder) -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col overflow-hidden transition-all duration-200 hover:-translate-y-1">
+          <div class="bg-slate-100 dark:bg-slate-800/50 px-6 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Artifact 5</span>
+            <span class="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">
+              Placeholder
             </span>
-            <span class="text-xs font-mono text-slate-400">Week 9</span>
           </div>
 
-          <div class="flex items-start gap-3">
-            <div class="p-2.5 rounded-xl bg-sky-500/10 text-sky-500 shrink-0">
-              <i class="fa-solid fa-rocket"></i>
-            </div>
+          <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
             <div>
-              <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition-colors leading-snug">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
                 Artifact 5: The Moonshot
-              </h2>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono">Full Stack / Cloud / 3D</p>
+              </h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+                An ambitious capstone concept featuring full-stack real-time collaboration tools or complex data visualizers.
+              </p>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 dark:border-slate-800">
+              <button disabled class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800/60 cursor-not-allowed">
+                <span>Coming Soon</span>
+              </button>
             </div>
           </div>
-
-          <div class="space-y-1">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Idea & Concept</h3>
-            <textarea class="w-full bg-slate-100/70 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 text-xs text-slate-600 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-sky-500 leading-relaxed resize-none italic" rows="3">An ambitious, high-concept project stretching our technical bounds — exploring complex visualizations, real-time data, or novel interactive features.</textarea>
-          </div>
-
-          <div class="space-y-1">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Reflection & Notes</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Idea phase: Evaluating technical feasibility and ambitious architectural concepts.
-            </p>
-          </div>
         </div>
 
-        <div class="pt-4 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-3">
-          <span class="text-xs text-slate-400 italic">Placeholder Card</span>
-          <button disabled class="px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-400 text-xs font-semibold cursor-not-allowed">
-            Pending
-          </button>
-        </div>
       </div>
-
-    </div>
+    </section>
   </main>
 
-  <!-- LOG.md Modal Container -->
-  <div id="log-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
-    <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-3xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-6 bg-white dark:bg-slate-900 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center text-xs text-slate-500 dark:text-slate-400">
+      <p>TCSS 490 Course Work &bull; Group Blue Two &bull; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- Prompt Log Modal -->
+  <div id="logModal" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
       
-      <!-- Modal Header -->
-      <div class="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-900/90">
-        <div class="flex items-center gap-2">
-          <i class="fa-solid fa-terminal text-sky-400"></i>
-          <h3 class="font-mono text-sm font-bold text-white">LOG.md Markdown History (Blue Two)</h3>
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
+        <div class="flex items-center space-x-2">
+          <i class="fa-solid fa-terminal text-blue-500"></i>
+          <h3 class="font-bold text-slate-900 dark:text-white">AI Interaction Log (LOG.md)</h3>
         </div>
-        <button onclick="closeLogModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors">
+        <button id="closeLogBtn" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors p-1">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
 
-      <!-- Modal Content Textarea -->
-      <div class="p-6 overflow-y-auto space-y-4 font-mono text-xs text-slate-300 bg-slate-950 leading-relaxed">
-        <p class="text-slate-500">Copy or modify your interaction log to keep inside your GitHub repository's <code class="text-sky-400">LOG.md</code> file:</p>
-        <textarea id="log-text" class="w-full h-80 bg-slate-900 border border-slate-800 rounded-xl p-4 text-slate-200 font-mono text-xs focus:outline-none focus:ring-1 focus:ring-sky-500 resize-none leading-relaxed"># Development Log & Prompt History - Team Blue Two
+      <div class="p-6 overflow-y-auto space-y-4 font-mono text-xs text-slate-700 dark:text-slate-300">
+        <p class="font-sans text-xs text-slate-500 dark:text-slate-400 mb-2">
+          Below is a copy of your initial interaction log entries. Keep your main <code class="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-blue-500">LOG.md</code> file updated in your repository root!
+        </p>
 
-## [TCSS 490 - Artifact 1] Portfolio & Reflection Site Initialization
-- **Course:** TCSS 490: Special Topics In Computing And Software Systems
-- **Group:** Blue Two
-- **Hosting Platform:** GitHub Pages
-- **Goal:** Single-page application hosting live artifact cards and interaction notes.
-
-### Prompts & Iterations:
-1. **Initial Setup:** "Create a single-file HTML/Tailwind portfolio with dark/light mode, 5 artifact cards, and prompt log tracking for team Blue Two."
-2. **Card Structure:** "Incorporate Artifact 1 (Portfolio), Artifact 2 (Something We Will Use), Artifact 3 (AI Inside), Artifact 4 (For Someone Else), and Artifact 5 (The Moonshot)."
-
-### Reflection:
-Hosting directly on GitHub Pages eliminates terminal dependencies while offering zero-cost, persistent deployment for all course assignments.</textarea>
+        <div class="bg-slate-900 text-slate-100 p-4 rounded-xl space-y-3 overflow-x-auto border border-slate-800">
+          <div>
+            <span class="text-blue-400 font-bold"># AI Interaction Log - TCSS 490</span>
+          </div>
+          <div>
+            <span class="text-slate-400">## Artifact 1: Portfolio Setup</span>
+          </div>
+          <div>
+            <span class="text-emerald-400">User:</span> "Build a simple portfolio site for TCSS 490 assignments..."<br>
+            <span class="text-purple-400">AI:</span> Generated single-file responsive layout with dark mode support.
+          </div>
+          <div>
+            <span class="text-emerald-400">User:</span> "Incorporate group Blue Two branding, course title, and updated artifact titles..."<br>
+            <span class="text-purple-400">AI:</span> Applied course specific labels, updated Artifact 1 link to GitHub repository, and updated placeholders.
+          </div>
+        </div>
       </div>
 
-      <!-- Modal Footer -->
-      <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-slate-800 bg-slate-900">
-        <button onclick="closeLogModal()" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-colors">
-          Close
-        </button>
-        <button onclick="copyLogContent()" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold transition-all flex items-center gap-2 shadow-sm">
-          <i id="copy-icon" class="fa-regular fa-copy"></i>
-          <span id="copy-text">Copy LOG.md Source</span>
+      <div class="p-4 border-t border-slate-200 dark:border-slate-800 flex justify-end bg-slate-50 dark:bg-slate-800/50">
+        <button id="closeLogBtnFooter" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+          Close Window
         </button>
       </div>
-
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-200 dark:border-slate-800 mt-16 py-8 bg-white dark:bg-slate-900/50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
-      <p>TCSS 490 • Group Blue Two • Hosted on GitHub Pages</p>
-      <div class="flex items-center space-x-4">
-        <span>Static Single File</span>
-        <span>•</span>
-        <a href="https://pages.github.com" target="_blank" class="hover:text-sky-500 transition-colors">GitHub Pages Docs</a>
-      </div>
-    </div>
-  </footer>
-
   <script>
-    // Theme Toggle Functionality
-    function toggleTheme() {
-      const htmlElement = document.documentElement;
-      const themeIcon = document.getElementById('theme-icon');
-      
-      if (htmlElement.classList.contains('dark')) {
-        htmlElement.classList.remove('dark');
-        themeIcon.className = 'fa-solid fa-moon text-slate-600';
-        localStorage.setItem('theme', 'light');
+    // Theme Switcher Logic
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      themeIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // Modal Logic
+    const logModal = document.getElementById('logModal');
+    const openLogBtn = document.getElementById('openLogBtn');
+    const closeLogBtn = document.getElementById('closeLogBtn');
+    const closeLogBtnFooter = document.getElementById('closeLogBtnFooter');
+
+    const toggleModal = (show) => {
+      if (show) {
+        logModal.classList.remove('hidden');
       } else {
-        htmlElement.classList.add('dark');
-        themeIcon.className = 'fa-solid fa-sun text-amber-400';
-        localStorage.setItem('theme', 'dark');
+        logModal.classList.add('hidden');
       }
-    }
+    };
 
-    // Modal Control Functions
-    function openLogModal() {
-      const modal = document.getElementById('log-modal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-
-    function closeLogModal() {
-      const modal = document.getElementById('log-modal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-    }
-
-    // Copy Log Text
-    function copyLogContent() {
-      const text = document.getElementById('log-text').value;
-      const copyText = document.getElementById('copy-text');
-      const copyIcon = document.getElementById('copy-icon');
-
-      navigator.clipboard.writeText(text).then(() => {
-        copyText.innerText = "Copied!";
-        copyIcon.className = "fa-solid fa-check text-emerald-400";
-
-        setTimeout(() => {
-          copyText.innerText = "Copy LOG.md Source";
-          copyIcon.className = "fa-regular fa-copy";
-        }, 2000);
-      });
-    }
-
-    // Close Modal on Background Click
-    document.getElementById('log-modal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeLogModal();
-      }
+    openLogBtn.addEventListener('click', () => toggleModal(true));
+    closeLogBtn.addEventListener('click', () => toggleModal(false));
+    closeLogBtnFooter.addEventListener('click', () => toggleModal(false));
+    
+    logModal.addEventListener('click', (e) => {
+      if (e.target === logModal) toggleModal(false);
+    });
+  </script>
+</body>
+</html>
     });
   </script>
 
