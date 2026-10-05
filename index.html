@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TCSS 490 Portfolio | Team Blue Two</title>
+  <title>TCSS 490 Course Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -42,9 +42,6 @@
       </div>
 
       <div class="flex items-center space-x-3">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950/80 dark:text-blue-300 border border-blue-200 dark:border-blue-800/60">
-          <i class="fa-solid fa-users text-blue-500"></i> BLUE TWO
-        </span>
         <button id="themeToggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
           <i id="themeIcon" class="fa-solid fa-moon"></i>
         </button>
@@ -68,13 +65,11 @@
             </div>
             
             <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-              Group Project Cards
+              Course Artifacts & Projects
             </h2>
-            
-            <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold text-sm">
-              <i class="fa-solid fa-user-group"></i>
-              <span>BLUE TWO</span>
-            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              A showcase of projects, reflections, and interaction logs built throughout the course.
+            </p>
           </div>
 
           <div class="flex flex-wrap gap-3">
@@ -113,7 +108,7 @@
                   <i class="fa-solid fa-file-lines text-blue-500"></i> Summary
                 </h4>
                 <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
-                  Built a responsive, single-page web portfolio using HTML, Tailwind CSS, and JavaScript to host and track five course assignments for TCSS 490. It includes dark mode support, an interactive prompt log modal, and structured placeholder cards for future team project deliverables.
+                  Built a responsive, single-page web portfolio using HTML, Tailwind CSS, and JavaScript to host and track five course assignments for TCSS 490. It includes dark mode support, an interactive prompt log modal, and structured placeholder cards for future project deliverables.
                 </p>
               </div>
               
@@ -153,7 +148,7 @@
                 Artifact 2: Something We Will Use
               </h3>
               <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
-                A shared study session scheduler or bus tracking bot tailored for group Blue Two members to coordinate assignment syncs.
+                A personal utility tool or productivity workflow helper designed to assist with daily course organization and tasks.
               </p>
             </div>
 
@@ -207,7 +202,7 @@
                 Artifact 4: For Someone Else
               </h3>
               <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
-                A custom solution built specifically to help solve a real operational problem for a local business or community non-profit.
+                A custom solution built specifically to help solve a real operational problem for a target user or local community group.
               </p>
             </div>
 
@@ -234,7 +229,7 @@
                 Artifact 5: The Moonshot
               </h3>
               <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
-                An ambitious capstone concept featuring full-stack real-time collaboration tools or complex data visualizers.
+                An ambitious capstone concept featuring innovative technology, real-time tools, or complex data visualizers.
               </p>
             </div>
 
@@ -253,59 +248,9 @@
   <!-- Footer -->
   <footer class="border-t border-slate-200 dark:border-slate-800 py-6 bg-white dark:bg-slate-900 mt-12">
     <div class="max-w-6xl mx-auto px-4 text-center text-xs text-slate-500 dark:text-slate-400">
-      <p>TCSS 490 Course Work &bull; Group Blue Two &bull; Hosted on GitHub Pages</p>
+      <p>TCSS 490 Course Work &bull; Hosted on GitHub Pages</p>
     </div>
   </footer>
-
-  <!-- Prompt Log Modal -->
-  <div id="logModal" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
-      
-      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
-        <div class="flex items-center space-x-2">
-          <i class="fa-solid fa-terminal text-blue-500"></i>
-          <h3 class="font-bold text-slate-900 dark:text-white">AI Interaction Log</h3>
-        </div>
-        <button id="closeLogBtn" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors p-1">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-
-      <div class="p-6 overflow-y-auto space-y-4 font-mono text-xs text-slate-700 dark:text-slate-300">
-        <p class="font-sans text-xs text-slate-500 dark:text-slate-400 mb-2">
-          View the complete markdown log directly on GitHub: 
-          <a href="https://github.com/AshvirGuptar/TCSS490-blue-two-portfolio/blob/main/log.md" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-semibold underline hover:text-blue-700">log.md on GitHub</a>
-        </p>
-
-        <div class="bg-slate-900 text-slate-100 p-4 rounded-xl space-y-3 overflow-x-auto border border-slate-800 leading-relaxed">
-          <div>
-            <span class="text-blue-400 font-bold"># AI Interaction Log - TCSS 490</span>
-          </div>
-          <div class="pt-2">
-            <span class="text-slate-400 font-semibold">## Artifact 1: Portfolio Setup</span>
-          </div>
-          <div>
-            <span class="text-emerald-400">User:</span> "Build a simple portfolio site for TCSS 490 assignments with dark mode."<br>
-            <span class="text-purple-400">AI:</span> Generated single-file static HTML/Tailwind template with live dark mode toggle.
-          </div>
-          <div>
-            <span class="text-emerald-400">User:</span> "Incorporate Blue Two branding, course info, updated artifact titles, and GitHub link."<br>
-            <span class="text-purple-400">AI:</span> Updated headers, badges, placeholder card names, and direct link to repo.
-          </div>
-          <div>
-            <span class="text-emerald-400">User:</span> "Add a 2-sentence summary box to Artifact 1 card."<br>
-            <span class="text-purple-400">AI:</span> Formatted summary block inside card and updated site structure.
-          </div>
-        </div>
-      </div>
-
-      <div class="p-4 border-t border-slate-200 dark:border-slate-800 flex justify-end bg-slate-50 dark:bg-slate-800/50">
-        <button id="closeLogBtnFooter" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
-          Close Window
-        </button>
-      </div>
-    </div>
-  </div>
 
   <script>
     // Theme Switcher Logic
@@ -317,27 +262,6 @@
       const isDark = document.documentElement.classList.contains('dark');
       themeIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-
-    // Modal Logic
-    const logModal = document.getElementById('logModal');
-    const openLogBtn = document.getElementById('openLogBtn');
-    const closeLogBtn = document.getElementById('closeLogBtn');
-    const closeLogBtnFooter = document.getElementById('closeLogBtnFooter');
-
-    const toggleModal = (show) => {
-      if (show) {
-        logModal.classList.remove('hidden');
-      } else {
-        logModal.classList.add('hidden');
-      }
-    };
-
-    closeLogBtn.addEventListener('click', () => toggleModal(false));
-    closeLogBtnFooter.addEventListener('click', () => toggleModal(false));
-    
-    logModal.addEventListener('click', (e) => {
-      if (e.target === logModal) toggleModal(false);
     });
   </script>
 </body>
