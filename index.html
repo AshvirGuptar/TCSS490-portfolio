@@ -102,15 +102,25 @@
 
           <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
             <div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
                 Artifact 1: Portfolio & Reflection Site
               </h3>
-              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-                The initial single-page application built to house all course artifacts for TCSS 490. Designed using static HTML, CSS, and JavaScript with dark mode and interaction logging.
-              </p>
               
+              <!-- Two-Sentence Summary Block -->
+              <div class="bg-blue-50/50 dark:bg-blue-950/30 rounded-xl p-3 border border-blue-100 dark:border-blue-900/50 mb-3">
+                <h4 class="text-[11px] font-bold uppercase tracking-wider text-blue-700 dark:text-blue-300 mb-1 flex items-center gap-1">
+                  <i class="fa-solid fa-file-lines text-blue-500"></i> Summary
+                </h4>
+                <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                  Built a responsive, single-page web portfolio using HTML, Tailwind CSS, and JavaScript to host and track five course assignments for TCSS 490. It includes dark mode support, an interactive prompt log modal, and structured placeholder cards for future team project deliverables.
+                </p>
+              </div>
+              
+              <!-- Reflection Block -->
               <div class="bg-slate-50 dark:bg-slate-800/60 rounded-xl p-3 border border-slate-200/80 dark:border-slate-700/60 mb-4">
-                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Reflection</h4>
+                <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1 flex items-center gap-1">
+                  <i class="fa-solid fa-comment-dots text-slate-400"></i> Reflection
+                </h4>
                 <p class="text-xs text-slate-600 dark:text-slate-300 italic">
                   "Iterated with AI chat tools to structure a clean responsive site. Focused on lightweight front-end delivery and accessible dark mode toggling."
                 </p>
@@ -262,23 +272,27 @@
 
       <div class="p-6 overflow-y-auto space-y-4 font-mono text-xs text-slate-700 dark:text-slate-300">
         <p class="font-sans text-xs text-slate-500 dark:text-slate-400 mb-2">
-          Below is a copy of your initial interaction log entries. Keep your main <code class="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-blue-500">LOG.md</code> file updated in your repository root!
+          Below is the simplified interaction record. Make sure to also keep the standalone <code class="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-blue-500">LOG.md</code> in your repo root!
         </p>
 
-        <div class="bg-slate-900 text-slate-100 p-4 rounded-xl space-y-3 overflow-x-auto border border-slate-800">
+        <div class="bg-slate-900 text-slate-100 p-4 rounded-xl space-y-3 overflow-x-auto border border-slate-800 leading-relaxed">
           <div>
             <span class="text-blue-400 font-bold"># AI Interaction Log - TCSS 490</span>
           </div>
-          <div>
-            <span class="text-slate-400">## Artifact 1: Portfolio Setup</span>
+          <div class="pt-2">
+            <span class="text-slate-400 font-semibold">## Artifact 1: Portfolio Setup</span>
           </div>
           <div>
-            <span class="text-emerald-400">User:</span> "Build a simple portfolio site for TCSS 490 assignments..."<br>
-            <span class="text-purple-400">AI:</span> Generated single-file responsive layout with dark mode support.
+            <span class="text-emerald-400">User:</span> "Build a simple portfolio site for TCSS 490 assignments with dark mode."<br>
+            <span class="text-purple-400">AI:</span> Generated single-file static HTML/Tailwind template with live dark mode toggle.
           </div>
           <div>
-            <span class="text-emerald-400">User:</span> "Incorporate group Blue Two branding, course title, and updated artifact titles..."<br>
-            <span class="text-purple-400">AI:</span> Applied course specific labels, updated Artifact 1 link to GitHub repository, and updated placeholders.
+            <span class="text-emerald-400">User:</span> "Incorporate Blue Two branding, course info, updated artifact titles, and GitHub link."<br>
+            <span class="text-purple-400">AI:</span> Updated headers, badges, placeholder card names, and direct link to repo.
+          </div>
+          <div>
+            <span class="text-emerald-400">User:</span> "Add a 2-sentence summary box to Artifact 1 card."<br>
+            <span class="text-purple-400">AI:</span> Formatted summary block inside card and updated site structure.
           </div>
         </div>
       </div>
@@ -325,10 +339,5 @@
       if (e.target === logModal) toggleModal(false);
     });
   </script>
-</body>
-</html>
-    });
-  </script>
-
 </body>
 </html>
