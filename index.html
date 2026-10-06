@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TCSS 490 Course Portfolio | Ashvir Gupta</title>
+  <title>TCSS 490 Portfolio | Ashvir Guptar</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -43,235 +43,194 @@
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen transition-colors duration-200 antialiased selection:bg-blue-500 selection:text-white">
 
-  <!-- Header / Navigation Bar -->
+  <!-- Compact Top Navigation Header -->
   <header class="sticky top-0 z-50 backdrop-blur-md bg-gray-900/80 border-b border-gray-800">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Brand Logo / Title -->
+      <div class="flex items-center justify-between h-14">
+        <!-- Brand Title & Subtitle Badge -->
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-blue-500/20">
+          <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-xs shadow-md shadow-blue-500/20">
             AG
           </div>
-          <div>
-            <span class="font-bold text-white text-lg tracking-tight">Ashvir Gupta</span>
-            <span class="text-xs text-gray-400 block -mt-1 font-mono">TCSS 490 Portfolio</span>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-white text-base tracking-tight">TCSS 490</span>
+            <span class="text-xs text-gray-400 hidden sm:inline">&bull;</span>
+            <span class="text-xs text-blue-400 font-medium bg-blue-950/60 px-2.5 py-0.5 rounded-full border border-blue-800/50">
+              Ashvir Guptar
+            </span>
           </div>
         </div>
 
-        <!-- Navigation Right Links & Actions -->
-        <div class="flex items-center gap-3">
+        <!-- Header Actions -->
+        <div class="flex items-center gap-2.5">
           <a href="https://github.com/AshvirGuptar/TCSS490-portfolio/blob/main/log.md" 
              target="_blank" 
              rel="noopener noreferrer" 
-             class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium text-gray-300 bg-gray-800/80 hover:bg-gray-700/80 border border-gray-700/80 transition-all hover:text-white shadow-sm">
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-300 bg-gray-800/80 hover:bg-gray-700/80 border border-gray-700/80 transition-all hover:text-white shadow-sm">
             <i class="fa-solid fa-terminal text-blue-400"></i>
             <span>LOG.md</span>
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-70"></i>
           </a>
 
           <a href="https://github.com/AshvirGuptar/TCSS490-portfolio" 
              target="_blank" 
              rel="noopener noreferrer" 
-             class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-all shadow-sm shadow-blue-600/20">
-            <i class="fa-brands fa-github text-sm"></i>
-            <span class="hidden sm:inline">Repository</span>
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-all shadow-sm shadow-blue-600/20">
+            <i class="fa-brands fa-github text-xs"></i>
+            <span class="hidden sm:inline">Repo</span>
           </a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative py-16 sm:py-20 overflow-hidden border-b border-gray-800/80">
-    <!-- Subtle Background Glow -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
-
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="text-center max-w-3xl mx-auto">
-        <!-- Subtitle Badge with Name -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/60 border border-blue-800/50 text-blue-400 text-xs font-medium mb-6">
-          <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-          <span>Ashvir Gupta &bull; Individual Course Portfolio</span>
-        </div>
-
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-          TCSS 490: Special Topics In Computing
-        </h1>
-        
-        <p class="mt-4 text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">
-          A showcase of artifacts, AI-assisted development explorations, and weekly reflections documenting software systems progress.
-        </p>
-
-        <!-- Quick Access Actions -->
-        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <a href="https://github.com/AshvirGuptar/TCSS490-portfolio/blob/main/log.md" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/25">
-            <i class="fa-solid fa-terminal text-xs"></i>
-            <span>View Prompt Log (LOG.md)</span>
-            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-80"></i>
-          </a>
-          
-          <a href="https://github.com/AshvirGuptar/TCSS490-portfolio" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-300 bg-gray-800/90 hover:bg-gray-700/90 border border-gray-700/80 transition-all hover:text-white shadow-sm">
-            <i class="fa-brands fa-github text-base"></i>
-            <span>GitHub Repository</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Artifacts Section -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-    <div class="flex items-center justify-between mb-8">
+  <!-- Artifacts Grid Section -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+    <div class="flex items-center justify-between mb-6">
       <div>
-        <h2 class="text-2xl font-bold text-white tracking-tight">Course Artifacts</h2>
-        <p class="text-sm text-gray-400 mt-1">Projects and technical deliverables created throughout the quarter.</p>
+        <h1 class="text-xl font-bold text-white tracking-tight">Course Artifacts</h1>
+        <p class="text-xs text-gray-400 mt-0.5">Projects and technical deliverables created for TCSS 490.</p>
       </div>
       <span class="text-xs font-mono px-2.5 py-1 rounded bg-gray-800 text-gray-400 border border-gray-700">1 / 5 Released</span>
     </div>
 
-    <!-- Artifacts Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
       <!-- Artifact 1 (Active) -->
-      <div class="group relative rounded-2xl bg-gray-800/60 border border-gray-700/80 hover:border-blue-500/50 transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-lg">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-900/40 text-blue-300 border border-blue-800/50">
+      <div class="group relative rounded-xl bg-gray-800/60 border border-gray-700/80 hover:border-blue-500/50 transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-lg p-5">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-900/40 text-blue-300 border border-blue-800/50">
               Artifact 01
             </span>
-            <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Active
+            <span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Active
             </span>
           </div>
 
-          <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+          <h2 class="text-base font-bold text-white group-hover:text-blue-400 transition-colors">
             Portfolio Setup & AI Log Integration
-          </h3>
+          </h2>
 
-          <p class="mt-3 text-sm text-gray-300 leading-relaxed">
+          <p class="mt-2 text-xs text-gray-300 leading-relaxed">
             Personal portfolio site hosted on GitHub Pages with automated CSS styling, dark mode support, and integrated prompt logging structure for course tracking.
           </p>
 
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-gray-900/80 text-gray-300 border border-gray-700/60">HTML5</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-gray-900/80 text-gray-300 border border-gray-700/60">Tailwind</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-gray-900/80 text-gray-300 border border-gray-700/60">GitHub Pages</span>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900/80 text-gray-300 border border-gray-700/60">HTML5</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900/80 text-gray-300 border border-gray-700/60">Tailwind</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-gray-900/80 text-gray-300 border border-gray-700/60">GitHub Pages</span>
           </div>
         </div>
 
-        <div class="p-6 pt-0 mt-auto">
+        <div class="mt-5 pt-3 border-t border-gray-700/50">
           <a href="https://github.com/AshvirGuptar/TCSS490-portfolio" 
              target="_blank" 
              rel="noopener noreferrer" 
-             class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-colors shadow-sm">
-            <i class="fa-brands fa-github"></i>
+             class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-colors shadow-sm">
+            <i class="fa-brands fa-github text-xs"></i>
             <span>View Repository</span>
-            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-80"></i>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-80"></i>
           </a>
         </div>
       </div>
 
       <!-- Placeholder Artifact 2 -->
-      <div class="rounded-2xl bg-gray-800/20 border border-gray-800/80 p-6 flex flex-col justify-between opacity-60">
+      <div class="rounded-xl bg-gray-800/20 border border-gray-800/80 p-5 flex flex-col justify-between opacity-60">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-400 border border-gray-700/50">
+          <div class="flex items-center justify-between mb-3">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-gray-800 text-gray-400 border border-gray-700/50">
               Artifact 02
             </span>
-            <span class="text-xs font-mono text-gray-500">Upcoming</span>
+            <span class="text-[11px] font-mono text-gray-500">Upcoming</span>
           </div>
 
-          <h3 class="text-lg font-semibold text-gray-300">
+          <h2 class="text-base font-semibold text-gray-300">
             Future Artifact
-          </h3>
+          </h2>
 
-          <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+          <p class="mt-2 text-xs text-gray-500 leading-relaxed">
             Content and project details for this artifact will be published as assigned in course modules.
           </p>
         </div>
 
-        <div class="mt-8 pt-4 border-t border-gray-800/60 flex items-center justify-between text-xs text-gray-500 font-mono">
+        <div class="mt-6 pt-3 border-t border-gray-800/60 flex items-center justify-between text-[11px] text-gray-500 font-mono">
           <span>Status: Pending</span>
           <span>Week --</span>
         </div>
       </div>
 
       <!-- Placeholder Artifact 3 -->
-      <div class="rounded-2xl bg-gray-800/20 border border-gray-800/80 p-6 flex flex-col justify-between opacity-60">
+      <div class="rounded-xl bg-gray-800/20 border border-gray-800/80 p-5 flex flex-col justify-between opacity-60">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-400 border border-gray-700/50">
+          <div class="flex items-center justify-between mb-3">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-gray-800 text-gray-400 border border-gray-700/50">
               Artifact 03
             </span>
-            <span class="text-xs font-mono text-gray-500">Upcoming</span>
+            <span class="text-[11px] font-mono text-gray-500">Upcoming</span>
           </div>
 
-          <h3 class="text-lg font-semibold text-gray-300">
+          <h2 class="text-base font-semibold text-gray-300">
             Future Artifact
-          </h3>
+          </h2>
 
-          <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+          <p class="mt-2 text-xs text-gray-500 leading-relaxed">
             Content and project details for this artifact will be published as assigned in course modules.
           </p>
         </div>
 
-        <div class="mt-8 pt-4 border-t border-gray-800/60 flex items-center justify-between text-xs text-gray-500 font-mono">
+        <div class="mt-6 pt-3 border-t border-gray-800/60 flex items-center justify-between text-[11px] text-gray-500 font-mono">
           <span>Status: Pending</span>
           <span>Week --</span>
         </div>
       </div>
 
       <!-- Placeholder Artifact 4 -->
-      <div class="rounded-2xl bg-gray-800/20 border border-gray-800/80 p-6 flex flex-col justify-between opacity-60">
+      <div class="rounded-xl bg-gray-800/20 border border-gray-800/80 p-5 flex flex-col justify-between opacity-60">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-400 border border-gray-700/50">
+          <div class="flex items-center justify-between mb-3">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-gray-800 text-gray-400 border border-gray-700/50">
               Artifact 04
             </span>
-            <span class="text-xs font-mono text-gray-500">Upcoming</span>
+            <span class="text-[11px] font-mono text-gray-500">Upcoming</span>
           </div>
 
-          <h3 class="text-lg font-semibold text-gray-300">
+          <h2 class="text-base font-semibold text-gray-300">
             Future Artifact
-          </h3>
+          </h2>
 
-          <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+          <p class="mt-2 text-xs text-gray-500 leading-relaxed">
             Content and project details for this artifact will be published as assigned in course modules.
           </p>
         </div>
 
-        <div class="mt-8 pt-4 border-t border-gray-800/60 flex items-center justify-between text-xs text-gray-500 font-mono">
+        <div class="mt-6 pt-3 border-t border-gray-800/60 flex items-center justify-between text-[11px] text-gray-500 font-mono">
           <span>Status: Pending</span>
           <span>Week --</span>
         </div>
       </div>
 
       <!-- Placeholder Artifact 5 -->
-      <div class="rounded-2xl bg-gray-800/20 border border-gray-800/80 p-6 flex flex-col justify-between opacity-60">
+      <div class="rounded-xl bg-gray-800/20 border border-gray-800/80 p-5 flex flex-col justify-between opacity-60">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-400 border border-gray-700/50">
+          <div class="flex items-center justify-between mb-3">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-gray-800 text-gray-400 border border-gray-700/50">
               Artifact 05
             </span>
-            <span class="text-xs font-mono text-gray-500">Upcoming</span>
+            <span class="text-[11px] font-mono text-gray-500">Upcoming</span>
           </div>
 
-          <h3 class="text-lg font-semibold text-gray-300">
+          <h2 class="text-base font-semibold text-gray-300">
             Future Artifact
-          </h3>
+          </h2>
 
-          <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+          <p class="mt-2 text-xs text-gray-500 leading-relaxed">
             Content and project details for this artifact will be published as assigned in course modules.
           </p>
         </div>
 
-        <div class="mt-8 pt-4 border-t border-gray-800/60 flex items-center justify-between text-xs text-gray-500 font-mono">
+        <div class="mt-6 pt-3 border-t border-gray-800/60 flex items-center justify-between text-[11px] text-gray-500 font-mono">
           <span>Status: Pending</span>
           <span>Week --</span>
         </div>
@@ -281,9 +240,9 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-800 bg-gray-900/50 py-8 text-center text-xs text-gray-500">
+  <footer class="border-t border-gray-800/80 bg-gray-900/50 py-6 text-center text-xs text-gray-500 mt-10">
     <div class="max-w-6xl mx-auto px-4">
-      <p>Ashvir Gupta &bull; TCSS 490 Course Portfolio</p>
+      <p>Ashvir Guptar &bull; TCSS 490 Course Portfolio</p>
       <p class="mt-1 text-gray-600">Hosted with GitHub Pages</p>
     </div>
   </footer>
