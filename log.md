@@ -1,7 +1,7 @@
 # AI Interaction Log - TCSS 490
 
-## Ashvir
 ## Project: Course Portfolio (Artifact 1)
+## Ashvir Guptar
 
 ---
 
