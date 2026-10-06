@@ -11,7 +11,7 @@
 
 ### Entry 2: Branding & Course Alignment
 * **User Prompt:** "Incorporate assignment names, course titles, updated artifact titles, and direct repo link."
-* **AI Action:** Updated header metadata, group badges, placeholder titles for artifacts 2-5, and linked Artifact 1 button to `https://github.com/AshvirGuptar/TCSS490-portfolio`.
+* **AI Action:** Updated header metadata, badges, placeholder titles for artifacts 2-5, and linked Artifact 1 button to `https://github.com/AshvirGuptar/TCSS490-portfolio`.
 
 ### Entry 3: Summary Integration
 * **User Prompt:** "Add a 2-sentence summary of what was built into Card 1."
