@@ -45,8 +45,8 @@ This document records the prompt engineering and development workflow utilized t
 
 | Timestamp (UTC) | Tool / AI Model | Development Focus / Goal | Technical Intent & Summary |
 | :--- | :--- | :--- | :--- |
-| **2026-10-19 22:00** | Gemini / Claude Code | Architectural Planning & Model Integration | Evaluated course requirements for incorporating an active model loop within zero-cost constraints, opting for a headless CLI code auditing approach (`claude -p`) combined with a client-side secure vault. |
-| **2026-10-19 22:30** | Gemini / Claude Code | Local Storage & CSV Export | Implemented a client-side vault manager using browser `localStorage` and added a feature to export credentials as standard `.csv` files compatible with browser password managers like Chrome. |
-| **2026-10-19 23:05** | Gemini / Claude Code | Documentation & UX Refining | Refined interface copy to be user-focused, added auto-save capabilities on generation, integrated individual entry deletion controls, and documented system boundaries in `CLAUDE.md`. |
+| **2026-10-18 10:00** | Gemini | Project Structure | Worked with Gemini initially to build client-side secure vault logic using `localStorage` and designed UI layout for credential cards with Tailwind CSS. |
+| **2026-10-19 13:00** | Claude Code (`claude -p`) / Gemini | Debug / Updates | Integrated CSV export functionality formatted for browser manager compatibility. Troubleshooting bugs with AI agent regarding array mapping and HTML string escaping for delete handlers. |
+| **2026-10-19 15:30** | Gemini / Claude Code | Deployment | Refined auto-save vs. explicit generation triggers, resolving pre-population bugs on initial page load. Validated GitHub Pages deployment, tested local cache persistence, and finalized master portfolio updates and log entries. |
 
 ---
