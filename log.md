@@ -50,3 +50,17 @@ This document records the prompt engineering and development workflow utilized t
 | **2026-10-19 15:30** | Gemini / Claude Code | Deployment | Refined auto-save vs. explicit generation triggers, resolving pre-population bugs on initial page load. Validated GitHub Pages deployment, tested local cache persistence, and finalized master portfolio updates and log entries. |
 
 ---
+
+## Project: Investment Goal & Trajectory Calculator (Artifact 4)
+# AI Prompt Log & Development Activity - Artifact 04
+This document records the prompt engineering and development workflow utilized to build and deploy the Investment Portfolio Trajectory Simulator for TCSS 490 (Artifact 04).
+## Log Entries
+
+| Timestamp (UTC) | Tool / AI Model | Development Focus / Goal | Technical Intent & Summary |
+| :--- | :--- | :--- | :--- |
+| **2026-10-25 2:00PM** | Gemini | Project Structure | Evaluated artifact ideas against artifact 4 instructions. Selected client-side investment simulator with dynamic outputs that lined up with the needs of a known and trusted future user. Established single-file index.html architecture using Tailwind CSS and FontAwesome CDN, moved info to Claude for development. |
+| **2026-10-28 10:00PM** | Claude Code | Debug / Updates | Coded client-side mathematical compounding growth logic ($PV$, $PMT$, $r$) executing dynamically on input events. Built milestone goal timeline estimator and year-by-year trajectory table breakdown. |
+| **2026-10-28 9:00AM** | Claude Code | Added Features | Implemented bottom calculation helper panel providing Historical CAGR ($CAGR = (FV/PV)^{1/t} - 1$) and weighted Asset Allocation methods (Equities/Bonds/Cash) with auto-apply bindings to the main return slider. |
+| **2026-10-28 9:00PM** | Claude Code | Added Features | Inflation-Adjusted Purchasing, Save Scenarios, Presets based on clients verbal requests for use case. |
+| **2026-10-29 9:00PM** | Claude Code | Criteria Evaluation | Compliance & Constraints Checklist based on artifact 4 instructions and past artifact feedback. |
+
