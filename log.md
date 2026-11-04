@@ -63,4 +63,4 @@ This document records the prompt engineering and development workflow utilized t
 | **2026-10-28 9:00AM** | Claude Code | Added Features | Implemented bottom calculation helper panel providing Historical CAGR ($CAGR = (FV/PV)^{1/t} - 1$) and weighted Asset Allocation methods (Equities/Bonds/Cash) with auto-apply bindings to the main return slider. |
 | **2026-10-28 9:00PM** | Claude Code | Added Features | Inflation-Adjusted Purchasing, Save Scenarios, Presets based on clients verbal requests for use case. |
 | **2026-10-29 9:00PM** | Claude Code | Criteria Evaluation | Compliance & Constraints Checklist based on artifact 4 instructions and past artifact feedback. |
-
+| **2026-11-03 6:00PM** | Claude Code | Added Feature | Added interactive Virtual Guide feature next to core financial inputs. Clicking an icon opens a concise modal assistant that explains complex terms like CAGR, inflation discounting, and compounding rates for users.|
