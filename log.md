@@ -56,7 +56,7 @@ This document records the prompt engineering and development workflow utilized t
 This document records the prompt engineering and development workflow utilized to build and deploy the Investment Portfolio Trajectory Simulator for TCSS 490 (Artifact 04).
 ## Log Entries
 
-| Timestamp (UTC) | Tool / AI Model | Development Focus / Goal | Technical Intent & Summary |
+| Timestamp (LOCAL PST) | Tool / AI Model | Development Focus / Goal | Technical Intent & Summary |
 | :--- | :--- | :--- | :--- |
 | **2026-10-25 2:00PM** | Gemini | Project Structure | Evaluated artifact ideas against artifact 4 instructions. Selected client-side investment simulator with dynamic outputs that lined up with the needs of a known and trusted future user. Established single-file index.html architecture using Tailwind CSS and FontAwesome CDN, moved info to Claude for development. |
 | **2026-10-28 8:00AM** | Claude Code | Debug / Updates | Coded client-side mathematical compounding growth logic ($PV$, $PMT$, $r$) executing dynamically on input events. Built milestone goal timeline estimator and year-by-year trajectory table breakdown. |
@@ -66,4 +66,13 @@ This document records the prompt engineering and development workflow utilized t
 | **2026-11-03 4:00PM** | Claude Code | Added Feature | Added interactive Virtual Guide feature next to core financial inputs. Clicking an icon opens a concise modal assistant that explains complex terms like CAGR, inflation discounting, and compounding rates for users.|
 | **2026-11-03 5:00PM** | Claude Code | Testing/Review | Coordinated with the team regarding finalized artifact version, received testing results from client to get feedback and confirmed that the artifact functions as intended.|
 | **2026-11-03 8:00PM** | Client Hand-off | Testing | Confirmed with the client that the current version of our Portfolio Trajectory Simulator fulfills their needs while also collecting feedback on aspects such as UI, development timeline, and possible additions if development on the project continues.|
+
+
+| Timestamp (LOCAL PST) | Tool / AI Model | Development Focus / Goal | Technical Intent & Summary |
+| :--- | :--- | :--- | :--- |
+| **2026-11-08 12:00PM** | Claude Code | Scaffolding | Set up the project foundation in Next.js 16, TypeScript and Tailwind, with GitHub Actions CI and deployment to Vercel. Wrote the first CLAUDE.md, PLAN.md and LOG.md so every session could pick up where the last ended. Defined the core architecture: a framework-free analysis engine where every check uses the same scoring format. |
+| **2026-11-10 10:00PM** | Claude Code | Building | Built the Page Analyzer, Content Optimizer (with product specs), URL Optimizer, Site Audit crawler and Keyword Clusters. Added GEO scoring for AI search engines, PDF reports, Start over buttons, a redesigned homepage, and code-complete Google sign-in with saved project history. Tested everything with unit tests, browser tests and a phone/tablet sweep.|
+| **2026-11-11 12:00AM** | Claude Code | Building/Documentation  | Rewrote PLAN.md as a justified Weeks 2–5 roadmap with deliverables, effort estimates, dependencies and risks. Updated CLAUDE.md with team workflow rules, the current-week process and guidelines for upcoming AI features. Added GEO Optimization alongside AI Visibility as coming-soon tools, and fixed a missing sidebar logo along the way.|
+
+
 
